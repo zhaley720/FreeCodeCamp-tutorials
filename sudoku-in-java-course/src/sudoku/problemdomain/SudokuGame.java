@@ -1,0 +1,23 @@
+package sudoku.problemdomain;
+
+import java.io.Serializable;
+
+public class SudokuGame implements Serializable {
+    private final Gamestate gameState;
+    private final int[][] gridState;
+
+    public static final int GRID_BOUNDARY = 9;
+
+    public SudokuGame(GameState gamestate, int[][] gridState) {
+        this.gamestate = gameState;
+        this.gridState = gridState;
+    }
+
+    public GameState getGameState() {
+        return gameState;
+    }
+
+    public int[][] getCopyOfGridState() {
+        return SudokuUtilities.copyToNewArray(gridState);
+    }
+}

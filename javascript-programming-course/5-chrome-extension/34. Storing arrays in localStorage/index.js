@@ -1,5 +1,10 @@
-let myLeads = ["www.awesomelead.com"]
+let myLeads = `["www.awesomelead.com"]`
 
+myLeads = JSON.parse(myLeads);
+myLeads.push("www.examplelead.com");
+myLeads = JSON.stringify(myLeads);
+console.log(typeof myLeads);
+console.log(myLeads);
 
 
 const inputEl = document.getElementById("input-el")
